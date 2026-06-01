@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AUTO.DE Fahrzeugverkauf</title>
+    <link rel="stylesheet" href="styles.css?v=20260531" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="top-line"></div>
+      <nav class="nav-shell" aria-label="Hauptnavigation">
+        <a class="brand" href="#home" aria-label="AUTO.DE Startseite">
+          <span class="brand-mark"></span>
+          <span class="brand-text"><strong>AUTO<span>.DE</span></strong><small>fahrzeugverkauf</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">☰</button>
+        <div class="nav-links" id="main-menu">
+          <a href="#home" data-route="home">Startseite</a>
+          <a href="#vehicles" data-route="vehicles">Fahrzeuge</a>
+          <a href="#company" data-route="company">Unternehmen</a>
+          <a href="#faq" data-route="faq">FAQ</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page active" id="page-home" data-page="home">
+        <div class="hero">
+          <div class="hero-copy">
+            <h1>Geprüfte Fahrzeuge im Direktverkauf</h1>
+            <p>Aktuelle Fahrzeugangebote mit klaren Preisen, geprüften Fotos und persönlicher Betreuung bis zur Übergabe.</p>
+            <a class="primary-btn" href="#vehicles">Fahrzeuge Entdecken</a>
+          </div>
+          <div class="hero-stage" aria-hidden="true">
+            <div class="showroom">
+              <div class="light-bar"></div>
+              <div class="car-shape hero-car silver">
+                <span class="wheel front"></span>
+                <span class="wheel rear"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-row" aria-label="Leistungsversprechen">
+          <article>
+            <span class="icon-badge">✓</span>
+            <div>
+              <h2>Geprüfte Qualität</h2>
+              <p>Jedes Fahrzeug wird von Experten detailliert geprüft.</p>
+            </div>
+          </article>
+          <article>
+            <span class="icon-badge">↔</span>
+            <div>
+              <h2>Sichere Abwicklung</h2>
+              <p>Jedes Fahrzeug wird transparent und rechtssicher betreut.</p>
+            </div>
+          </article>
+          <article>
+            <span class="icon-badge">▣</span>
+            <div>
+              <h2>Logistik-Service</h2>
+              <p>Europaweite Lieferung durch erfahrene Partner.</p>
+            </div>
+          </article>
+        </div>
+
+        <section class="sales-info" aria-labelledby="sales-info-title">
+          <div class="sales-intro">
+            <span>Direktverkauf gepruefter Fahrzeuge</span>
+            <h2 id="sales-info-title">Willkommen bei AUTO.DE</h2>
+            <p>Wir sind auf den Verkauf von Fahrzeugen aus Bankruecknahmen und Leasingruecklaeufern spezialisiert. Sie finden bei uns regelmaessig aktualisierte Fahrzeuge mit klarer Herkunft, nachvollziehbaren Daten und festen Preisen.</p>
+          </div>
+
+          <div class="pickup-notice">
+            <strong>Fahrzeugabholung nur mit Termin</strong>
+            <p>Vor jeder Uebernahme vereinbaren Sie bitte per E-Mail einen Termin mit dem Ansprechpartner des Standorts. Geben Sie immer Fahrzeug-ID, Modell und den gewuenschten Zahlungsvorgang an. Die Preise sind fest und nicht verhandelbar.</p>
+            <a class="secondary-btn email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=Karmiles87%40gmail.com&su=Termin%20Fahrzeugabholung" target="_blank" rel="noopener">Termin per E-Mail anfragen</a>
+          </div>
+
+          <div class="sales-grid">
+            <article>
+              <h3>Warum AUTO.DE?</h3>
+              <ul>
+                <li>Ausgewaehlte und gepruefte Fahrzeuge</li>
+                <li>Klare Herkunft aus Bank- und Leasingbestaenden</li>
+                <li>Vollstaendige Unterlagen und transparente Angaben</li>
+                <li>Persoenliche Begleitung bis zur Uebergabe</li>
+              </ul>
+            </article>
+            <article>
+              <h3>Zahlung und Finanzierung</h3>
+              <p>Sie koennen Ihr Fahrzeug direkt bezahlen oder eine Finanzierung anfragen. Wir klaeren mit Ihnen die Verfuegbarkeit, Reservierung, Anzahlung, Restzahlung und alle notwendigen Dokumente.</p>
+            </article>
+            <article>
+              <h3>Einfacher Ablauf</h3>
+              <ol>
+                <li>Fahrzeug auswaehlen</li>
+                <li>Kontakt mit Fahrzeug-ID aufnehmen</li>
+                <li>Reservierung und Unterlagen pruefen</li>
+                <li>Zahlung abschliessen</li>
+                <li>Uebergabe oder Transport abstimmen</li>
+              </ol>
+            </article>
+          </div>
+        </section>
+
+        <div class="home-grid">
+          <section>
+            <div class="section-heading">
+              <h2>Aktuelle Angebote</h2>
+              <a href="#vehicles">Alle ansehen</a>
+            </div>
+            <div class="compact-list" id="home-offers"></div>
+          </section>
+          <section class="upcoming-panel">
+            <h2>Neue Fahrzeuge im Bestand</h2>
+            <div class="empty-state">
+              <strong>Der Bestand wird regelmäßig aktualisiert.</strong>
+              <span>Neue Fahrzeuge werden nach Prüfung ergänzt.</span>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="page" id="page-vehicles" data-page="vehicles">
+        <div class="catalog-layout">
+          <aside class="filters" aria-label="Filter">
+            <h1>Filter</h1>
+            <details open>
+              <summary>Marke</summary>
+              <label><input type="checkbox" value="Volkswagen" data-filter="brand" /> Volkswagen</label>
+              <label><input type="checkbox" value="BMW" data-filter="brand" /> BMW</label>
+              <label><input type="checkbox" value="Jeep" data-filter="brand" /> Jeep</label>
+              <label><input type="checkbox" value="Volvo" data-filter="brand" /> Volvo</label>
+              <label><input type="checkbox" value="Nissan" data-filter="brand" /> Nissan</label>
+              <label><input type="checkbox" value="Mercedes-Benz" data-filter="brand" /> Mercedes-Benz</label>
+              <label><input type="checkbox" value="Audi" data-filter="brand" /> Audi</label>
+              <label><input type="checkbox" value="Skoda" data-filter="brand" /> Skoda</label>
+              <label><input type="checkbox" value="Knaus" data-filter="brand" /> Knaus</label>
+              <label><input type="checkbox" value="Renault" data-filter="brand" /> Renault</label>
+            </details>
+            <details open>
+              <summary>Preis</summary>
+              <div class="range-group">
+                <span>0 EUR</span>
+                <input type="range" min="0" max="60000" step="1000" value="60000" id="price-range" />
+                <strong id="price-label">60.000 EUR</strong>
+              </div>
+            </details>
+            <details open>
+              <summary>Kilometer</summary>
+              <div class="range-group">
+                <span>0 km</span>
+                <input type="range" min="0" max="250000" step="5000" value="250000" id="mileage-range" />
+                <strong id="mileage-label">250.000 km</strong>
+              </div>
+            </details>
+            <details open>
+              <summary>Energie</summary>
+              <label><input type="checkbox" value="Elektro" data-filter="energy" /> Elektro</label>
+              <label><input type="checkbox" value="Diesel" data-filter="energy" /> Diesel</label>
+              <label><input type="checkbox" value="Diesel Mildhybrid" data-filter="energy" /> Diesel Mildhybrid</label>
+              <label><input type="checkbox" value="Benzin" data-filter="energy" /> Benzin</label>
+              <label><input type="checkbox" value="Hybrid" data-filter="energy" /> Hybrid</label>
+            </details>
+          </aside>
+
+          <section class="catalog-content">
+            <div class="search-bar">
+              <input id="search" type="search" placeholder="Suchen..." aria-label="Fahrzeuge suchen" />
+              <span id="result-count"></span>
+            </div>
+            <div class="feed-note">
+              <strong>Bestand:</strong>
+              <span id="feed-status">Fahrzeugbestand wird geladen.</span>
+            </div>
+            <div class="catalog-grid" id="catalog-grid"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="page" id="page-company" data-page="company">
+        <div class="company-hero">
+          <div class="facility-photo">
+            <div class="building"></div>
+            <div class="team-row" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="company-grid">
+          <section>
+            <h1>Über uns</h1>
+            <p>AUTO.DE bietet geprüfte Fahrzeuge mit transparenten Informationen, nachvollziehbaren Preisen und persönlicher Unterstützung beim Kauf.</p>
+            <h2>Unsere Philosophie</h2>
+            <p>Wir arbeiten mit realistischen Fahrzeugbewertungen, klaren Zustandsangaben und persönlicher Betreuung, damit jeder Kauf kalkulierbar bleibt.</p>
+          </section>
+          <section>
+            <h2>Standorte</h2>
+            <div class="map-card">
+              <span style="--x:34%;--y:46%"></span>
+              <span style="--x:54%;--y:38%"></span>
+              <span style="--x:64%;--y:61%"></span>
+            </div>
+          </section>
+        </div>
+
+        <div class="company-split">
+          <section>
+            <h2>Unsere Philosophie</h2>
+            <p>Hochwertiger Fahrzeugverkauf braucht belastbare Informationen. Deshalb kombinieren wir Fahrzeugprüfung, digitale Dokumentation und klare Zahlungsprozesse.</p>
+            <div class="partner-cards">
+              <article><strong>92%</strong><span>Wiederkehrende Käufer</span></article>
+              <article><strong>48h</strong><span>Durchschnittliche Freigabe</span></article>
+              <article><strong>500+</strong><span>Geprüfte Fahrzeuge pro Woche</span></article>
+            </div>
+          </section>
+          <section>
+            <h2>Unser Team</h2>
+            <div class="media-grid">
+              <div class="people-photo"></div>
+              <div class="office-photo"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="page" id="page-faq" data-page="faq">
+        <div class="faq-shell">
+          <h1>Fragen & Antworten</h1>
+          <div class="accordion" id="faq-list"></div>
+          <section class="contact-panel" id="contact-panel">
+            <h2>Kontakt aufnehmen</h2>
+            <p>Kontaktieren Sie uns direkt per WhatsApp, Telefon oder E-Mail. Wenn es um ein bestimmtes Fahrzeug geht, nennen Sie bitte die Fahrzeug-ID.</p>
+            <div class="contact-actions">
+              <a class="primary-btn" id="general-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp schreiben</a>
+              <a class="phone-btn" id="general-phone" href="#">Anrufen</a>
+              <a class="secondary-btn email-btn" id="general-email" href="#" target="_blank" rel="noopener">E-Mail senden</a>
+            </div>
+            <p class="contact-details">Telefon/WhatsApp: +237 687 00 39 58 · E-Mail: Karmiles87@gmail.com</p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div class="vehicle-modal" id="vehicle-modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-backdrop" data-modal-close></div>
+      <section class="modal-panel">
+        <button class="modal-close" type="button" data-modal-close aria-label="Fermer">x</button>
+        <div class="modal-gallery">
+          <img id="modal-main-image" src="" alt="" />
+          <div class="modal-thumbs" id="modal-thumbs" aria-label="Galerie photos"></div>
+        </div>
+        <div class="modal-info">
+          <span class="modal-kicker">Fahrzeugdetails</span>
+          <h2 id="modal-title"></h2>
+          <p id="modal-subtitle"></p>
+          <strong id="modal-price"></strong>
+          <dl id="modal-specs"></dl>
+          <div class="modal-actions">
+            <a class="whatsapp-btn" id="modal-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp schreiben</a>
+            <a class="phone-btn" id="modal-phone" href="#">Anrufen</a>
+            <a class="secondary-btn email-btn" id="modal-email" href="#" target="_blank" rel="noopener">E-Mail senden</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js?v=20260531"></script>
+  </body>
+</html>
